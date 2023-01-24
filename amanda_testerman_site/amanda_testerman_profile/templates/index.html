@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="../static/stylesheet/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Roar Louder</title>
+</head>
+<body>
+    <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Photo Gallery</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Hobbies</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        </ul>
+      </header>
+
+      <div class="mt-4 p-5 bg-primary text-white rounded">
+        <h2>Like What you see?</h2>
+        <h2>Please enter comments, concerns, or suggestions</h2>
+        <form method="POST" action="{% url 'home' %}">
+          {% csrf_token %}
+          {{ comment_form }}
+         <button type='submit' name="create" value='Add Comment' class="btn bg-dark text-white">Add Comment</button>
+        </form>
+      </div>
+
+    
+        <div class="container">
+    
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="../static/images/silly_with_cubs.jpg" alt="silly with cubs">
+                <div class="card-body">
+                  <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">This is a broader card with supporting text below as a natural introduction to additional content. </font><font style="vertical-align: inherit;">This content is a bit longer.</font></font></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">an offer</font></font></button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Modification</font></font></button>
+                    </div>
+                    <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9 minutes</font></font></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">صورة مصغرة</text></svg>
+                <div class="card-body">
+                  <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">This is a broader card with supporting text below as a natural introduction to additional content. </font><font style="vertical-align: inherit;">This content is a bit longer.</font></font></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">an offer</font></font></button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Modification</font></font></button>
+                    </div>
+                    <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9 minutes</font></font></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">صورة مصغرة</text></svg>
+                <div class="card-body">
+                  <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">This is a broader card with supporting text below as a natural introduction to additional content. </font><font style="vertical-align: inherit;">This content is a bit longer.</font></font></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">an offer</font></font></button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Modification</font></font></button>
+                    </div>
+                    <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9 minutes</font></font></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    
+
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Projects</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Photo Gallery</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Hobbies</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2022 Amanda Liliy Dawn Testerman</p>
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
