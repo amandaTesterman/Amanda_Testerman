@@ -14,6 +14,7 @@ class ContactInfo(Model):
 #  phone = PhoneNumberField(null=True)
 #  phone = PhoneNumberField(null=False, blank=False, unique=True)
    email = models.EmailField(max_length=254 )
+   is_created = models.BooleanField(default=False)
 
 
    '''

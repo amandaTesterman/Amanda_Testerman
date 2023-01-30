@@ -1,0 +1,52 @@
+html, body{
+    height:100%;
+    width: 100%;
+}
+/*===
+profile picture
+===*/
+#profilePic{
+    border-radius: 50%;
+    margin-top: 3rem;
+}
+#profileName{
+    padding-top:1.5rem;
+}
+#myContactInfo a {
+    color: cyan
+}
+/*===
+main/ all page (spacing)
+===*/
+.startSection{
+    margin-top:2rem;
+}
+.padding{
+    padding-top:5rem;
+    padding-bottom:5rem;
+}
+.seeTitle{
+    padding-top:3.5rem;
+}
+/*===
+text area
+===*/
+textarea{
+    resize: none;
+}
+/*=== Comment Form Area
+======*/
+
+/*===
+media query
+===*/
+@media screen and (max-width:768px){
+    .seeTitle{
+        padding-top:6.5rem;
+    }
+}
+@media screen and (max-width:576px){
+    .seeTitle{
+        padding-top:9rem;
+    }
+}
