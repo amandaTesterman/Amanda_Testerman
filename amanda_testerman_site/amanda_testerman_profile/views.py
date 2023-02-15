@@ -10,12 +10,13 @@ skills = "I have become knowledgeable in HTML, CSS, Javascript, jQuery, Python, 
 
 class HomeView(View):
     def get(self, request):
+        #grabbing all contacts and comments from data base and the the Forms to be able to use information to pass into HTML
 
        comments = Comment.objects.all()
        comment_form = CommentForm()
        contact = ContactInfo.objects.all()
        contact_form = ContactForm()
-
+        #setting up context data for display in html
        html_data = {
         'comments' : comments,
         'comment_form' : comment_form,
@@ -32,12 +33,18 @@ class HomeView(View):
         )    
  # github.com/sobrien-banyan/Imma-chore
     def post(self, request):
-        if "comment" in request.POST:
+        #if the add button is clicked on the comment form
+        if "add" in request.POST:
+            #the comment information in the text feild will be saved to database
             comment_form = CommentForm(request.POST).save()
             return redirect('home')
+            #if the create button is clicked on the contacts form
         elif "create" in request.POST:
+            #the information from all feilds will be saved to the database
             contact_form = ContactForm(request.POST).save()
+            #the feild "is_created" on the form will be set to True
             contact_form.is_created = True
             contact_form.save()
+            #imported messages for alert message to let users know their information was saved succesfully
             messages.success(request, "I have recieved your contact info and will response as soon as possible. Thank you!" )
             return redirect('home')
